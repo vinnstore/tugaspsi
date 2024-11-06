@@ -1,0 +1,100 @@
+body {
+    background-color: #0080ff;
+    margin: 10px;
+}
+.card {
+    transition: transform 0.2s;
+}
+body img {
+    height: 250px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.list-group-item {
+    display: flex;
+    justify-content: space-between;
+}
+.card-img-top {
+    height: 200px; /* Mengatur tinggi gambar agar seragam */
+    object-fit: cover; /* Memastikan gambar tidak terdistorsi */
+}
+h1 {
+    background-color: aqua;
+}
+
+body {
+    transition: background-color 0.5s, color 0.5s;
+}
+body.light-mode {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+body.dark-mode {
+    background-color: black;
+    color: rgb(0, 0, 0);
+}
+.theme-switch-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 13vh;
+    width: 110vh;
+}
+.theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 44px;
+}
+.theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 10%;
+    background-color: #ffffff;
+    transition: 0.4s;
+    border-radius: 44px;
+}
+.slider:hover {
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 36px;
+    width: 36px;
+    left: 4px;
+    bottom: 4px;
+    background-image: url('2.png');
+    transition: 0.4s;
+    border-radius: 50%;
+    background-size: cover;
+}
+input:checked +.slider {
+    background-color: #000000;
+}
+input:checked +.slider:hover {
+    box-shadow: 0 0 20px rgb(255, 255, 255);
+}
+input:checked +.slider:before {
+    transform: translate(30px);
+    background-image: url('1.png');
+    background-size: cover;
+}
+h2 {
+    background-color: white;
+}
+h3 {
+    background-color: white;
+}
